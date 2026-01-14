@@ -18,9 +18,10 @@ body {
   font-family: "Segoe UI", Arial, sans-serif;
   background: var(--bege);
   color: var(--texto);
-  padding-top: 190px; /* espaço do header fixo */
+  padding-top: 300px; /* AJUSTADO */
   line-height: 1.6;
 }
+
 
 /* ================= HEADER ================= */
 .site-header {
@@ -56,16 +57,20 @@ body {
 
 .menu a {
   text-decoration: none;
-  color: var(--rosa);
-  font-size: 15px;
+  background: var(--rosa);
+  color: var(--vinho);
+  padding: 10px 26px;
+  border-radius: 30px;
+  font-size: 13px;
   letter-spacing: 1.2px;
   text-transform: uppercase;
-  transition: opacity 0.3s;
+  transition: all 0.3s ease;
 }
 
 .menu a:hover {
-  opacity: 0.7;
+  background: #f1b8c7;
 }
+
 
 /* HEADER ENCOLHIDO */
 .site-header.shrink .header-inner {
@@ -190,4 +195,89 @@ section p {
   .logo-img {
     width: 160px;
   }
+}
+
+/* ================= BENEFÍCIOS ================= */
+.beneficios {
+  background: var(--bege);
+  padding: 35px 20px;
+}
+
+.beneficios-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  flex-wrap: wrap;
+}
+
+.beneficio {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  color: var(--vinho);
+}
+
+.beneficio img {
+  width: 46px;
+}
+
+.beneficio strong {
+  display: block;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+}
+
+.beneficio span {
+  font-size: 14px;
+  opacity: 0.9;
+}
+/* ================= PRODUTOS ================= */
+.produtos {
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.produtos h2 {
+  font-size: 26px;
+  font-weight: 300;
+  margin-bottom: 40px;
+}
+
+.produtos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.produto-card {
+  background: var(--branco);
+  border-radius: 14px;
+  padding-bottom: 18px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+
+.produto-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 14px 14px 0 0;
+}
+
+.produto-card h3 {
+  font-size: 16px;
+  margin: 15px 0 6px;
+}
+
+.produto-card span {
+  color: var(--vinho);
+  font-weight: 600;
+}
+.icon {
+  width: 42px;
+  height: 42px;
+  color: var(--vinho);
 }
