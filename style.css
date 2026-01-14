@@ -1,0 +1,193 @@
+:root {
+  --vinho: #7a1b43;
+  --vinho-escuro: #641636;
+  --rosa: #f5c7d3;
+  --bege: #f6f2ec;
+  --texto: #3a2a2a;
+  --branco: #ffffff;
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: var(--bege);
+  color: var(--texto);
+  padding-top: 190px; /* espaço do header fixo */
+  line-height: 1.6;
+}
+
+/* ================= HEADER ================= */
+.site-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: var(--vinho);
+  z-index: 1000;
+  transition: all 0.35s ease;
+}
+
+.header-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 20px;
+  transition: all 0.35s ease;
+}
+
+/* LOGO */
+.logo-img {
+  width: 220px;
+  height: auto; 
+  transition: all 0.35s ease;
+}
+
+/* MENU */
+.menu {
+  margin-top: 0px;
+  display: flex;
+  gap: 55px; /* MAIS ESPAÇO ENTRE TÍTULOS */
+}
+
+.menu a {
+  text-decoration: none;
+  color: var(--rosa);
+  font-size: 15px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  transition: opacity 0.3s;
+}
+
+.menu a:hover {
+  opacity: 0.7;
+}
+
+/* HEADER ENCOLHIDO */
+.site-header.shrink .header-inner {
+  padding: 16px 20px;
+}
+
+.site-header.shrink .logo-img {
+  width: 130px;
+}
+
+.site-header.shrink .menu {
+  margin-top: 10px;
+}
+
+/* ================= HOME ================= */
+.home {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.home h1 {
+  font-size: 36px;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+.home p {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 17px;
+}
+
+/* ================= CATEGORIAS ================= */
+.categorias {
+  padding: 80px 40px;
+}
+
+.categorias h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 50px;
+  font-weight: 300;
+}
+
+.categorias-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 30px;
+}
+
+/* CARD */
+.categoria-card {
+  background: var(--branco);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.categoria-card:hover {
+  transform: translateY(-6px);
+}
+
+.categoria-card img {
+  width: 100%;
+  height: 150px;        /* DIMINUI A ALTURA */
+  object-fit: cover;   /* MANTÉM PROPORÇÃO E CORTA */
+  object-position: center; /* CENTRALIZA O CORTE */
+  display: block;
+  border-radius: 14px 14px 0 0;
+}
+
+
+
+.categoria-card span {
+  display: block;
+  padding: 18px;
+  text-align: center;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+/* ================= SEÇÕES SIMPLES ================= */
+section.sobre,
+section.entrega,
+section.personalizar {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+section h2 {
+  font-size: 26px;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+section p {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+
+
+/* ================= FOOTER ================= */
+.footer {
+  background: var(--vinho-escuro);
+  color: var(--rosa);
+  text-align: center;
+  padding: 25px;
+  font-size: 14px;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  .menu {
+    gap: 28px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .logo-img {
+    width: 160px;
+  }
+}
