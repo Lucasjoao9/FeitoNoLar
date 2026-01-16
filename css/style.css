@@ -119,10 +119,12 @@ body {
   .beneficios-container {
     justify-content: center;
     text-align: center;
+    gap: 40px; 
   }
 
   .beneficio {
     flex-direction: column;
+     padding: 0 10px;    /* evita colar na borda */
   }
 }
 
@@ -136,6 +138,49 @@ body {
     min-width: 240px;
   }
 }
+
+@media (max-width: 768px) {
+  .beneficios {
+    margin-top: 130px;   /* afasta da logo/header */
+    padding-top: 20px;  /* dá respiro interno */
+  }
+
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 260px;
+  }
+
+  .menu a {
+    padding: 10px 20px;
+    font-size: 11px;
+  }
+}
+
+/* AJUSTE DE TOPO – PÁGINA DE CATEGORIA */
+.pagina-categoria .categoria-topo {
+  padding-top: 140px;   /* espaço abaixo do header */
+}
+
+@media (max-width: 768px) {
+  .pagina-categoria .categoria-topo {
+    padding-top: 120px; /* header é maior no mobile */
+  }
+}
+
+/* HEADER MAIS COMPACTO NO MOBILE */
+@media (max-width: 768px) {
+  .site-header .header-inner {
+    padding: 18px 20px 16px; /* reduz bastante a área vinho */
+  }
+
+  .site-header .logo-img {
+    width: 140px; /* logo menor no mobile */
+    margin-bottom: 12px;
+  }
+}
+
 
 
 /* ================= CATEGORIAS ================= */
@@ -178,6 +223,13 @@ body {
   transition: transform 0.3s;
 }
 
+.categoria-card a {
+  text-decoration: none;   /* remove o risco azul */
+  color: inherit;          /* herda a cor do card */
+  display: block;          /* faz o link ocupar o card todo */
+}
+
+
 .categoria-card:hover {
   transform: translateY(-6px);
 }
@@ -208,17 +260,6 @@ body {
   font-size: 14px;
 }
 
-/* ================= MOBILE ================= */
-@media (max-width: 768px) {
-  body {
-    padding-top: 260px;
-  }
-
-  .menu a {
-    padding: 10px 20px;
-    font-size: 11px;
-  }
-}
 
 /* HEADER NORMAL */
 .site-header {
@@ -448,4 +489,10 @@ body {
 .btn-carrinho:hover {
   transform: scale(1.08);
   opacity: 0.95;
+}
+
+/* AJUSTE DE TOPO PARA PÁGINAS DE CATEGORIA */
+.pagina-categoria main,
+.pagina-categoria .categoria-topo {
+  margin-top: 60px;
 }
