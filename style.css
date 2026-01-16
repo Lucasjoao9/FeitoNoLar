@@ -165,13 +165,21 @@ body {
 
 @media (max-width: 768px) {
   .pagina-categoria .categoria-topo {
-    padding-top: 100px; /* header é maior no mobile */
+    padding-top: 120px; /* header é maior no mobile */
   }
 }
 
+/* HEADER MAIS COMPACTO NO MOBILE */
+@media (max-width: 768px) {
+  .site-header .header-inner {
+    padding: 18px 20px 16px; /* reduz bastante a área vinho */
+  }
 
-
-
+  .site-header .logo-img {
+    width: 140px; /* logo menor no mobile */
+    margin-bottom: 12px;
+  }
+}
 
 
 
