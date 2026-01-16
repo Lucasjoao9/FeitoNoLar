@@ -5,7 +5,6 @@
   <title>Feito no Lar</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- CSS -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -15,49 +14,54 @@
   <header class="site-header">
     <div class="header-inner">
 
-      <!-- LOGO CENTRAL -->
-      <img 
-        src="assets/images/logo.jpg" 
-        alt="Feito no Lar" 
-        class="logo-img"
-      >
+      <img src="assets/images/logo.jpg" alt="Feito no Lar" class="logo-img">
 
-      <!-- MENU -->
       <nav class="menu">
-        <a href="#sobre">Sobre</a>
-        <a href="https://instagram.com/feito_no_lar" target="_blank">Insta</a>
-        <a href="#entrega">Entrega</a>
-        <a href="#personalizar">Personalizar</a>
+        <a href="#">Início</a>
+        <a href="#">Todos</a>
+        <a href="#">Personalizar</a>
+        <a href="https://instagram.com/feito_no_lar" target="_blank">Instagram</a>
       </nav>
 
     </div>
   </header>
 
-
+  <!-- ================= BENEFÍCIOS ================= -->
 <section class="beneficios">
   <div class="beneficios-container">
 
+    <!-- FRETE -->
     <div class="beneficio">
-      <svg viewBox="0 0 24 24" class="icon">
-        <path d="M3 7h13v7H3z" fill="none" stroke="currentColor" stroke-width="2"/>
-        <path d="M16 10h3l2 3v1h-5z" fill="none" stroke="currentColor" stroke-width="2"/>
-        <circle cx="7.5" cy="16.5" r="1.5"/>
-        <circle cx="17.5" cy="16.5" r="1.5"/>
+      <svg class="icon" viewBox="0 0 64 64">
+        <!-- linhas de movimento -->
+        <line x1="2" y1="22" x2="18" y2="22" />
+        <line x1="2" y1="30" x2="14" y2="30" />
+        <line x1="2" y1="38" x2="18" y2="38" />
+
+        <!-- corpo do caminhão -->
+        <rect x="18" y="18" width="26" height="18" rx="2" />
+        <path d="M44 22h8l6 6v8H44z" />
+
+        <!-- rodas -->
+        <circle cx="26" cy="40" r="3" />
+        <circle cx="48" cy="40" r="3" />
       </svg>
 
-      <div>
+      <div class="beneficio-texto">
         <strong>FRETE GRÁTIS</strong>
         <span>nas compras acima de: R$ 300,00</span>
       </div>
     </div>
 
+    <!-- PAGAMENTO -->
     <div class="beneficio">
-      <svg viewBox="0 0 24 24" class="icon">
-        <rect x="2" y="5" width="20" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/>
-        <line x1="2" y1="10" x2="22" y2="10" stroke="currentColor" stroke-width="2"/>
+      <svg class="icon" viewBox="0 0 64 64">
+        <rect x="4" y="14" width="56" height="36" rx="5"/>
+        <line x1="4" y1="26" x2="60" y2="26"/>
+        <line x1="10" y1="38" x2="26" y2="38"/>
       </svg>
 
-      <div>
+      <div class="beneficio-texto">
         <strong>FORMAS DE PAGAMENTO</strong>
         <span>Cartão de Crédito / Débito, Dinheiro ou Pix.</span>
       </div>
@@ -66,88 +70,42 @@
   </div>
 </section>
 
+  <!-- ================= CATEGORIAS ================= -->
+  <section class="categorias">
+    <h2 class="titulo-produtos">NOSSOS PRODUTOS</h2>
 
+    <div class="categorias-grid">
 
-<section class="produtos">
-  <h2>Produtos em Destaque</h2>
-
-  <div class="produtos-grid">
-
-    <div class="produto-card">
-      <img src="assets/images/jogos-americanos.jpg" alt="">
-      <h3>Jogo Americano Floral</h3>
-      <span>R$ 89,90</span>
-    </div>
-
-    <div class="produto-card">
-      <img src="assets/images/caminho-mesa.jpg" alt="">
-      <h3>Caminho de Mesa Linho</h3>
-      <span>R$ 129,90</span>
-    </div>
-
-    <div class="produto-card">
-      <img src="assets/images/guardanapos.jpg" alt="">
-      <h3>Kit Guardanapos</h3>
-      <span>R$ 59,90</span>
-    </div>
-
-  </div>
-</section>
-
-
-
-  <!-- ================= MAIN ================= -->
-  <main>
-
-    <!-- CATEGORIAS (APENAS VISUAL POR ENQUANTO) -->
-    <section class="categorias">
-
-      <h2>Nossos Produtos</h2>
-
-      <div class="categorias-grid">
-
-        <div class="categoria-card">
-          <img src="assets/images/jogos-americanos.jpg" alt="Jogos Americanos">
-          <span>Jogos Americanos</span>
-        </div>
-
-        <div class="categoria-card">
-          <img src="assets/images/caminhos-mesa.jpg" alt="Caminhos de Mesa">
-          <span>Caminhos de Mesa</span>
-        </div>
-
-        <div class="categoria-card">
-          <img src="assets/images/guardanapos.jpg" alt="Guardanapos de Pano">
-          <span>Guardanapos de Pano</span>
-        </div>
-
-        <div class="categoria-card">
-          <img src="assets/images/capas-almofada.jpg" alt="Capas de Almofada">
-          <span>Capas de Almofada</span>
-        </div>
-
-        <div class="categoria-card">
-          <img src="assets/images/panos-prato.jpg" alt="Panos de Prato Premium">
-          <span>Panos de Prato Premium</span>
-        </div>
-
-        <div class="categoria-card">
-          <img src="assets/images/kits-presente.jpg" alt="Kits Presente">
-          <span>Kits Presente</span>
-        </div>
-
+      <div class="categoria-card">
+        <a href="Jogo-americano.html" class="categoria-card">
+        <img src="assets/images/jogos-americanos.jpg" alt="Jogo Americano">
+        <span>jogo americano</span>
+      </a>
       </div>
-    </section>
 
-  </main>
+      <div class="categoria-card">
+        <img src="assets/images/guardanapos.jpg" alt="Guardanapos">
+        <span>guardanapos</span>
+      </div>
+
+      <div class="categoria-card">
+        <img src="assets/images/capas-almofada.jpg" alt="Capa Almofada">
+        <span>capa almofada</span>
+      </div>
+
+      <div class="categoria-card">
+        <img src="assets/images/panos-prato.jpg" alt="Pano de Prato">
+        <span>pano de prato</span>
+      </div>
+
+    </div>
+  </section>
 
   <!-- ================= FOOTER ================= -->
   <footer class="footer">
-    <p>© Feito no Lar • Artesanal com amor</p>
+    © Feito no Lar • Artesanal com amor
   </footer>
 
-  <!-- JS -->
-  <script src="js/script.js"></script>
-
+    <script src="js/script.js"></script>
 </body>
 </html>
